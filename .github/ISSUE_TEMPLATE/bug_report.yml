@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible StructraKit problem
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Never include bot tokens, Authorization headers, private repository URLs, or sensitive user data."
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: StructraKit, Python, and discord.py versions
+      placeholder: "StructraKit 0.1.0; Python 3.12; discord.py 2.7.1"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: "Windows 11 x86-64"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Sanitized traceback
+      render: shell
+
